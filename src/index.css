@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'gilroy';
+}
+
+/* img{
+    height: fit-content;
+    width: fit-content;
+    object-fit: conver;
+    background-color: red;
+} */
