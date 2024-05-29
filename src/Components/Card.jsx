@@ -1,4 +1,5 @@
 import React from "react";
+import "./Card.css";
 
 function Card() {
   const data = [
@@ -8,6 +9,7 @@ function Card() {
       name: "Amazon Basics",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquam ",
+      instock: true,
     },
     {
       image:
@@ -15,6 +17,7 @@ function Card() {
       name: "Daily Objects",
       description:
         "headphones ipsum dolor sit amet consectetur adipisicing elit. Totam aliquam ",
+      instock: false,
     },
     {
       image:
@@ -22,23 +25,23 @@ function Card() {
       name: "Clock",
       description:
         "clock ipsum dolor sit amet consectetur adipisicing elit. Totam aliquam ",
+      instock: false,
     },
   ];
 
   return (
-    <div className="w-full h-screen flex items-center justify-center gap-10 bg-zinc-200">
+    <div className="container">
       {data.map((elem, index) => (
-        <div key={index} className="w-52 bg-zinc-100 rounded-md overflow-hidden">
-          <div className="w-full h-32 bg-zinc-300">
-            <img
-              className="w-full h-full object-cover"
-              src={elem.image}
-              alt=""
-            />
+        <div key={index} className="card">
+          <div className="img-div">
+            <img src={elem.image} alt="" />
           </div>
-          <div className="w-full px-3 py-4">
-            <h2 className="font-semibold">{elem.name}</h2>
-            <p className="text-xs mt-5">{elem.description}</p>
+          <div className="text">
+            <h2>{elem.name}</h2>
+            <p>{elem.description}</p>
+            <button className="btn">
+              {elem.instock ? "In Stock" : "Out of Stock"}
+            </button>
           </div>
         </div>
       ))}
