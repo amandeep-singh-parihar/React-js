@@ -35,10 +35,10 @@
   border-top-right-radius: 10px;
 }
 
-.text{
-    padding: 0.5vh;
-    margin-top: 0.8vh;
-    padding-left: 1vh;
+.text {
+  padding: 0.5vh;
+  margin-top: 0.8vh;
+  padding-left: 1vh;
 }
 
 .text h2 {
@@ -49,16 +49,16 @@
   font-size: 1.8vh;
 }
 
-.img-div img{
-    height: 100%;
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    object-fit: cover;
-    object-position: center;
+.img-div img {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+  object-position: center;
 }
 
-.btn{
+.btn {
   border-radius: 50px;
   font-size: 10px;
   padding: 5px;
