@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.btn {
+  border: none;
+  min-height: 50px;
+  min-width: 90px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+.blue {
+  background-color: #188fd6;
+  color: white;
+}
+
+.red {
+  background-color: #cf142b;
+  color: white;
+}
