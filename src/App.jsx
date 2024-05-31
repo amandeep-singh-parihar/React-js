@@ -5,18 +5,19 @@ import "./App.css";
 
 function App() {
   // const data = ["aman", "deep", "singh", "parihar"];
-  const [val, setVal] = useState({ name: "Amandeep", isBanned: false });
+  const [val, setVal] = useState({ name: "Amandeep", age: 20 });
 
   return (
     <div>
       {/* <Card></Card> */}
       {/* <Card2></Card2> */}
-      <h1>Name : {val.name}</h1>
-      <h1>Banned : {val.isBanned.toString()}</h1>
       <button
-        className={`${
-          val.isBanned ? "btn blue" : "btn red"}`}
-        onClick={() => setVal({ ...val, isBanned: !val.isBanned })}>
+        onClick={() => {
+          setVal({ ...val, gender: "male" });
+          console.log(val);
+        }}
+        className="btn blue"
+      >
         Click
       </button>
     </div>
@@ -24,4 +25,3 @@ function App() {
 }
 
 export default App;
- 
