@@ -13,7 +13,7 @@ function App() {
       {/* <Card></Card> */}
       {/* <Card2></Card2> */}
       {val.map(item=><h1>{item}</h1>)}
-      <button onClick={()=>setVal(()=>val.filter((item,index)=>item%2))} className="btn blue">click</button>
+      <button onClick={()=>setVal([...val,val[val.length-1]+1])} className="btn blue">click</button>
     </div>
   );
 }
