@@ -5,21 +5,15 @@ import "./App.css";
 
 function App() {
   // const data = ["aman", "deep", "singh", "parihar"];
-  const [val, setVal] = useState({ name: "Amandeep", age: 20 });
+  // const [val, setVal] = useState({ name: "Amandeep", age: 20 });
+  const [val, setVal] = useState([1, 2, 3, 4, 5, 6]);
 
   return (
     <div>
       {/* <Card></Card> */}
       {/* <Card2></Card2> */}
-      <button
-        onClick={() => {
-          setVal({ ...val, gender: "male" });
-          console.log(val);
-        }}
-        className="btn blue"
-      >
-        Click
-      </button>
+      {val.map((item) => (<h1>{item}</h1>))}
+      <button onClick={() => {setVal(() => val.filter((item, index) => index != val.length - 1));}} className="btn blue"> Click </button>
     </div>
   );
 }
