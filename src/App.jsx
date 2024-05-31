@@ -12,10 +12,8 @@ function App() {
     <div>
       {/* <Card></Card> */}
       {/* <Card2></Card2> */}
-      {val.map((item) => (
-        <h1>{item}</h1>
-      ))}
-      <button onClick={()=>setVal(()=>val.filter((item,index)=>index!=2))} className="btn blue">Click</button>
+      {val.map(item=><h1>{item}</h1>)}
+      <button onClick={()=>setVal(()=>val.filter((item,index)=>item%2))} className="btn blue">click</button>
     </div>
   );
 }
