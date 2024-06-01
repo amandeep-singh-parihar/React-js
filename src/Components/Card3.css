@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.btn{
+    color: #fff;
+    background-color: #0081f1;
+    min-height: 30px;
+    min-width: 50px;
+}
