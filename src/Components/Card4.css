@@ -27,13 +27,16 @@ body {
   width: 30vw;
   overflow: hidden;
   position: relative;
+  display: flex;
 }
 
-img {
+.img1,
+.img2 {
   height: 100%;
   width: 100%;
   object-fit: cover;
   display: block;
+  flex-shrink: 0;
 }
 
 .arrow {
@@ -43,11 +46,24 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
-  background-color: rgba(206,212,211,0.5);
+  background-color: rgba(206, 212, 211, 0.5);
   opacity: 1;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.tf0 {
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
+  transition-duration: 300;
+
+}
+
+.tf100 {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  transition-duration: 300;
+
 }
