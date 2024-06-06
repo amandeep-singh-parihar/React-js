@@ -17,39 +17,54 @@ function App() {
   const data = [
     {
       name: "Simran",
-      profession: "Singer",
+      profession: "Painter",
       image:
-        "https://images.unsplash.com/photo-1614204424926-196a80bf0be8?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://plus.unsplash.com/premium_photo-1689551670902-19b441a6afde?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       friends: false,
     },
     {
       name: "Astha",
       profession: "Dancer",
       image:
-        "https://images.unsplash.com/photo-1491349174775-aaafddd81942?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       friends: false,
     },
     {
-      name: "Sheeal",
+      name: "Neelam",
+      profession: "Singer",
+      image:
+        "https://plus.unsplash.com/premium_photo-1689551671541-31a345ce6ae0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      friends: false,
+    },
+    {
+      name: "Khushi",
+      profession: "Engineering",
+      image:
+        "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      friends: false,
+    },
+    {
+      name: "Sheetal",
       profession: "Artist",
       image:
-        "https://plus.unsplash.com/premium_photo-1689551670902-19b441a6afde?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://plus.unsplash.com/premium_photo-1689551671548-79ff30459d2a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       friends: false,
     },
     {
       name: "Vanshika",
-      profession: "Bommer",
+      profession: "Business",
       image:
-        "https://plus.unsplash.com/premium_photo-1689551671548-79ff30459d2a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1500336624523-d727130c3328?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       friends: false,
     },
   ];
 
   const [realData, setRealData] = useState(data);
-  const handleFriendsButton = (cardindex) => {
-    setRealData((previous) => {
-      return previous.map((item, index) => {
-        if (index === cardindex) {
+  //state jaha banti hai wahi modify ke ja sakti hai
+  const handleFriendsButton = (idx) => {
+    setRealData((prev) => {
+      return prev.map((item, index) => {
+        if (index === idx) {
           return { ...item, friends: !item.friends };
         }
         return item;
@@ -58,16 +73,19 @@ function App() {
   };
 
   return (
-    <div className="w-full h-screen bg-zinc-300 flex gap-4 items-center justify-center">
-      {realData.map((item, index) => (
-        <Card6
-          key={index}
-          index={index}
-          handleClick={handleFriendsButton}
-          values={item}
-        />
-      ))}
-    </div>
+    <>
+      <div className="w-full h-screen bg-zinc-300 flex gap-3 items-center justify-center">
+        {realData.map((item, index) => (
+          <Card6
+            key={index}
+            idx={index}
+            handleClick={handleFriendsButton}
+            values={item}
+          />
+          //sending all the items using values and defined the value in the card6 itself
+        ))}
+      </div>
+    </>
   );
 }
 
