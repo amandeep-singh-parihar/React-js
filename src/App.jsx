@@ -84,7 +84,7 @@ function App() {
           />
           //sending all the items using values and defined the value in the card6 itself
         ))}
-      </div>
+      </div> 
     </>
   );
 }
