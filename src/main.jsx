@@ -5,13 +5,20 @@ import App2 from "./App2.jsx";
 import App3 from "./Form Handling/App3.jsx";
 import App4 from "./Form Handling/App4.jsx";
 import App5 from "./Form Handling/App5.jsx";
+import App_form from "./App_form.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App5 />
+    <App_form />
   </React.StrictMode>
 );
+
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//   <React.StrictMode>
+//     <App5 />
+//   </React.StrictMode>
+// );
 
 // ReactDOM.createRoot(document.getElementById("root")).render(
 //   <React.StrictMode>
